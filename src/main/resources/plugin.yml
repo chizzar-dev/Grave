@@ -3,7 +3,6 @@ version: ${project.version}
 main: com.metox.grave.GravePlugin
 api-version: 1.13
 author: chizzar-dev
-website: https://discord.gg/forges
 description: Olunce esyalar mezarda durur, uzerinde hologram ve geri sayim.
 
 commands:
