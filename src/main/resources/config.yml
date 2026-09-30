@@ -1,0 +1,63 @@
+# Grave - chizzar-dev
+# https://github.com/chizzar-dev/Grave
+#
+# Yer tutucular:
+#   %player%  sahibin adi        %player_in%  ilgi ekli hali (chizzar'in)
+#   %time%    kalan sure         %items%      icindeki esya sayisi
+#   %xp%      saklanan tecrube   %x% %y% %z% %world%  konum
+#
+# Mezarlar graves.yml dosyasinda saklanir; sunucu yeniden baslasa bile
+# esyalar kaybolmaz.
+
+# Mezarin kac saniye duracagi
+duration: 60
+
+# Tecrube de mezarda saklansin mi (acinca sahibine geri verilir)
+keep-experience: true
+
+# true  = sadece sahibi (ve 'grave.open.others' yetkisi olanlar) acabilir
+# false = herkes acabilir
+only-owner: false
+
+# Mezar baskalari tarafindan kirilamaz / patlamayla yok edilemez
+protect: true
+
+# Olum yerine gorsel bir sandik konsun mu
+place-chest: true
+chest-material: "CHEST"
+
+# Oyuncu basina ayni anda en fazla kac mezar (0 = sinirsiz).
+# Limit asilirsa en eski mezar bosaltilir.
+max-graves-per-player: 0
+
+# Sure dolunca:
+#   true  = sahibi cevrimiciyse esyalar dogrudan ona verilir
+#   false = esyalar mezarin yerine dokulur
+return-to-owner-on-expire: false
+
+# Bu dunyalarda mezar olusmaz
+disabled-worlds: []
+
+gui-title: "&8%player_in% Mezari"
+
+hologram:
+  enabled: true
+  # Mezarin kac blok ustunde duracagi
+  height: 1.2
+  # Satirlar arasi bosluk
+  line-spacing: 0.28
+  lines:
+    - "&6&l%player_in% Mezari"
+    - "&7Kalan sure: &e%time%"
+
+messages:
+  died: "&7Esyalarin mezarinda. &f%x%, %y%, %z% &7- &e%time% saniye"
+  opened: "&aMezarini actin."
+  not-owner: "&cBu senin mezarin degil!"
+  xp-restored: "&aTecruben geri verildi."
+  returned: "&aMezarindaki esyalar sana geri verildi."
+  no-graves: "&7Su an hic mezarin yok."
+  list-entry: "&7- &f%world% &7(%x%, %y%, %z%) &8- &e%time%"
+  players-only: "&cBu komut yalnizca oyuncular icindir."
+  no-permission: "&cBunun icin yetkin yok."
+  reloaded: "&aGrave ayarlari yeniden yuklendi."

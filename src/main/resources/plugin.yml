@@ -1,0 +1,24 @@
+name: Grave
+version: ${project.version}
+main: com.metox.grave.GravePlugin
+api-version: 1.13
+author: chizzar-dev
+website: https://discord.gg/forges
+description: Olunce esyalar mezarda durur, uzerinde hologram ve geri sayim.
+
+commands:
+  grave:
+    description: Mezarlarini listele veya ayarlari yeniden yukle
+    usage: /grave list | /grave reload
+    aliases: [mezar]
+
+permissions:
+  grave.use:
+    description: Olunce mezar olusur
+    default: true
+  grave.reload:
+    description: Configi yeniden yukleyebilir
+    default: op
+  grave.open.others:
+    description: Baskalarinin mezarlarini acabilir
+    default: op
